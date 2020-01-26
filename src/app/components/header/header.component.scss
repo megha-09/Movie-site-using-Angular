@@ -1,0 +1,137 @@
+
+.navbar{
+    margin: 0 auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: #424242;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 15px;
+    font-family: 'Oswald', sans-serif;
+    z-index: 20;
+}
+
+.logo{
+    padding-left: 15px;
+}
+
+.logo h2{
+    background: rgb(255, 215, 0);
+    color: #212121;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0px;
+    
+}
+
+.search-container{
+    position: relative;
+    width: 360px;
+    height: 40px;
+}
+
+.search-container input{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 320px;
+    border: 0px;
+    background: #212121;
+    padding: 5px 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.search-bar{
+    color: rgb(255, 215, 0);
+}
+
+.search-container input::placeholder{
+    color: rgb(255, 215, 0);
+    letter-spacing: 0.1em;
+}
+
+.search-container input:focus{
+outline: none;
+}
+
+.search-container button{
+    position: absolute;
+    top: 0px;
+    bottom:0px;
+    right:0px;
+    width:40px;
+    background: #212121;
+    border: none;
+    color: rgb(255, 215, 0);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:focus{
+outline: none;
+}
+
+.navbtn{
+    color: #101010;
+    margin-right:30px;
+    height:60px;
+    text-align: center;
+    transition: 0.5s ease all;
+    margin-bottom:10px;
+    font-size: 30px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.navbtn:hover{
+    border-bottom: 2px solid rgb(255, 215, 0);
+}
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px){
+    .logo h2{
+        padding: 1px;
+    }
+    .search-container{
+        width: 200px;
+    }
+    .search-container input{
+        width: 170px;
+    }
+    .navbtn{
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .search-container{
+        width: 150px;
+        margin-left: 30px;
+    }
+    .search-container input{
+        width: 120px;
+        font-size: 12px;
+    }
+    .navbtn{
+        text-align: right;
+        padding-left: 30px;
+        font-size: 20px;
+    }
+    .logo{
+        font-size: 11px;
+        padding-left: 2px;
+    }
+    
+}
+

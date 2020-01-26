@@ -1,0 +1,29 @@
+<div class = "main-container">
+        
+        <div class = "second-container">
+                <select class = "filter" [(ngModel)] = "selected_filter" (change) = "filter_function()">
+                        <option value = "" disabled hidden>Filter by</option>
+                        <option selected = "true" *ngFor = "let filter of filters" [ngValue] = "filter">{{filter}}</option>
+                </select>     
+        </div>
+
+        <div class = "movies-list">
+        <div *ngFor = "let movie of movies_only" class = "trial">
+                <a [title] = "movie.overview" [routerLink] = "['/movie-page', movie.id]">  
+                        <div class = "movie-poster">
+                                <img src = {{movie.poster_path}} alt = "No image">
+                        </div>
+                </a>
+        </div>
+        </div>
+
+        <div class = "buttons">
+                <button class = "button" id = "button1" (click) = "clicked('back')">Back</button>
+                <h5 id = "page">
+                        <input #page_Number class = "input-pagenumber" value = "{{pageNumber}}" type = "text" size = 1 placeholder = "{{pageNumber}}" (change) = "input_pagenumber(page_Number.value)">
+                        of {{total_pages}}
+                </h5>
+                <button class = "button" id = "button2" (click) = "clicked('next')">Next</button>
+        </div>
+
+</div>

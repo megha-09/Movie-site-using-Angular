@@ -1,0 +1,22 @@
+<body>
+<div class = "container">
+    <div class = "name-container">
+       <p class = "name">{{movie_details.title}}</p>
+        <br>
+        <p class = "extra">{{movie_details.runtime}} mins | 
+        {{movie_details.release_date}}
+        </p>
+    </div>
+
+    <div class = "poster">
+        <img src={{movie_details.backdrop_path}}>
+    </div>
+
+    <div class = "info">
+        <p class = "overview">Overview: <span style = "color: #fff;">{{movie_details.overview}}</span></p>
+        <p class = "genre-title">Genres: <span class = "genres" *ngFor = "let genre of movie_details.genres" style = "color: #fff;">{{genre.name}}, </span></p>
+        <p class = "vote">Vote Average: <span style = "color: #fff;">{{movie_details.vote_average}}</span></p>
+    </div>
+
+</div>
+</body>

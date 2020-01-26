@@ -1,0 +1,20 @@
+<div class="main-container">
+
+<div>
+    <h2 class="line">Results for <span class="movie-name">"{{movie_searched}}"</span></h2>    
+</div>
+<div class="list" *ngFor="let movie of list_of_movies; let i=index; let odd=odd; let even=even;" [ngClass]="{odd:odd, even:even}">
+        <a [title]="movie.overview" [routerLink]="['/movie-page', movie.id]" style="text-decoration: none;">  
+        <div class="each-movie">
+                <img class="movie-poster" src= {{movie.poster_path}} style="height: 37px; width: 32px;">
+                <span class="name">{{movie.title}} </span>
+                <span *ngIf="movie.release_date" class="year">{{ -movie.release_date.split('-')[0] }}</span>
+        </div>
+        </a>
+</div>
+
+<div *ngIf = "!list_of_movies || list_of_movies.length === 0" style="text-align: center; font-size: 30px;">
+        Sorry no movies found:/
+</div>
+
+</div>

@@ -1,0 +1,44 @@
+.main-container{
+    max-width: 950px;
+    justify-content: center;
+    display: block ;
+    margin: auto;
+    position: relative;
+    margin-top: 75px;
+}
+
+.each-movie{
+    display: inline-block;    
+}
+
+.name{
+    margin-left: 10px;
+    text-align: center;
+}
+
+.odd{
+    background-color: #f6f6f5;
+}
+.even{
+    background-color: #fbfbfb;
+}
+.movie-name{
+    font-weight: bold;
+}
+.line{
+    font-weight: lighter;
+    color: #D4AF37;
+
+}
+
+@media screen and (max-width: 700px){
+    .each-movie{
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .each-movie{
+        margin-left: 10px;
+    }
+}
